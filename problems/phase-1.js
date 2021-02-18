@@ -2,19 +2,20 @@
    to 5 and false if it is not.
 */
 function isFive(num) {
- if (num === 5) {
-   return 5;
- }
+  if (num === 5) {
+    return true;
+  }
+  return false
 }
 
 /*2. Is Odd Write a function isOdd that takes in a number as an argument and
    returns true if the number is odd and returns false otherwise.
 */
 function isOdd(number) {
-  if (typeof number !== 'number'){
-    throw Error('some error')
+  if (typeof number !== 'number') {
+    throw new TypeError('wrong type')
   }
-  return (number % 2 === 0);
+  return (number % 2 !== 0);
 }
 
 /*3. Array  of the Range Write a function myRange(min, max, step) that takes in
@@ -22,10 +23,10 @@ function isOdd(number) {
       numbers between and inclusive of min and max at step intervals.
 */
 
-function myRange(min, max, step=1) {
+function myRange(min, max, step = 1) {
   const array = []
   for (let i = min; i <= max; i++) {
-    array.push(i);  
+    array.push(i);
   }
   return array
 }
@@ -35,10 +36,10 @@ function myRange(min, max, step=1) {
 */
 
 function fizzBuzz(max) {
-  if (typeof max !== 'number' ){
+  if (typeof max !== 'number') {
     throw TypeError('needs to be a number')
   }
-  if (max < 0){
+  if (max < 0) {
     throw new Error
   }
 
@@ -54,4 +55,4 @@ function fizzBuzz(max) {
 }
 
 
-module.exports = {isFive, isOdd, myRange, fizzBuzz }
+module.exports = { isFive, isOdd, myRange, fizzBuzz }

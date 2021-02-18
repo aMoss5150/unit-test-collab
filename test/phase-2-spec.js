@@ -62,7 +62,7 @@ describe('avgValue', function () {
     //Act
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(avgValue([1,2,3])).to.equal(2)
 
   })
 })

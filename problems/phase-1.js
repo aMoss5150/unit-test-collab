@@ -25,14 +25,14 @@ function isOdd(number) {
 
 function myRange(min, max, step = 1) {
   const array = []
-  for (let i = min; i <= max; i++) {
+  for (let i = min; i <= max; i += step) {
     array.push(i);
   }
   return array
 }
 /*4. Fizz Buzz Define a function fizzBuzz(max) that takes a number and prints
    every number from 0 to max (not inclusive) that is divisible by either 3 or
-   5, but not both. 
+   5, but not both.
 */
 
 function fizzBuzz(max) {
@@ -45,9 +45,7 @@ function fizzBuzz(max) {
 
   const array = []
   for (let i = 0; i < max; i += 1) {
-    if (i % 3 === 0 || i % 5 !== 0) {
-      array.push(i);
-    } else if (i % 5 === 0 || i % 3 !== 0) {
+    if ((i % 3 === 0 && i % 5 !== 0) || (i % 5 === 0 && i % 3 !== 0)) {
       array.push(i);
     }
   }
